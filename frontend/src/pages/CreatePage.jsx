@@ -1,4 +1,4 @@
-import { Box, Button, Container, Heading, Input, useColorModeValue, useToast, VStack } from "@chakra-ui/react";
+import { Box, Button, Container, Heading, Input, useColorModeValue, useToast, VStack, Select, Radio, RadioGroup,Stack  } from "@chakra-ui/react";
 import { useState } from "react";
 import { useProductStore } from "../store/product";
 
@@ -7,6 +7,9 @@ const CreatePage = () => {
 		name: "",
 		price: "",
 		image: "",
+		description: "",
+		targetGender: "",
+		ageGroup: ""
 	});
 	const toast = useToast();
 
@@ -29,7 +32,7 @@ const CreatePage = () => {
 				isClosable: true,
 			});
 		}
-		setNewProduct({ name: "", price: "", image: "" });
+		setNewProduct({ name: "", price: "", image: "", description: "", targetGender: "", ageGroup: "" });
 	};
 
 	return (
@@ -60,6 +63,27 @@ const CreatePage = () => {
 							value={newProduct.image}
 							onChange={(e) => setNewProduct({ ...newProduct, image: e.target.value })}
 						/>
+						<Input
+							placeholder='Description'
+							name='description'
+							value={newProduct.description} 
+							onChange={(e) => setNewProduct({ ...newProduct, description: e.target.value })}
+						/>
+						<RadioGroup value={newProduct.targetGender}
+							onChange={(value) => setNewProduct({ ...newProduct, targetGender: value })}>
+							<Stack direction='row'>
+								<Radio value='male'>Male</Radio>
+								<Radio value='female'>Female</Radio>
+							</Stack>
+						</RadioGroup>
+						<Select placeholder='Select Age Group' value={newProduct.ageGroup}
+							onChange={(e) => setNewProduct({ ...newProduct, ageGroup:e.target.value }) }> 
+							<option value='kid'>Kid (less than 10 years old)</option>
+							<option value='juvenile'>Juvenile (10 to 20)</option>
+							<option value='young'>Young (20-40)</option>
+							<option value='middleage'>Middle age (40-60)</option>
+							<option value='old'>Old (older than 60)</option>
+						</Select>
 
 						<Button colorScheme='blue' onClick={handleAddProduct} w='full'>
 							Add Product

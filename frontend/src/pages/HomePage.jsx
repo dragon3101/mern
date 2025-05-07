@@ -9,8 +9,18 @@ const HomePage = () => {
 
 	useEffect(() => {
 		fetchProducts();
-	}, [fetchProducts]);
+	}, [fetchProducts]);	
 	console.log("products", products);
+	// const fakeProduct ={
+	// 	_id: "1001",
+	// 	name: "Product 1",
+	// 	price: 100,
+	// 	description: "This is product 1",
+	// 	image: "https://via.placeholder.com/150",
+	// 	ageGroup: "young",
+	// 	targetGender:"male"
+	// }
+	// if(products.length ==0) products.push(fakeProduct);
 
 	return (
 		<Container maxW='container.xl' py={12}>

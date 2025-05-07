@@ -19,6 +19,7 @@ import {
 	useDisclosure,
 	useToast,
 	VStack,
+	Select, Radio, RadioGroup,Stack 
 } from "@chakra-ui/react";
 import { useProductStore } from "../store/product";
 import { useState } from "react";
@@ -133,6 +134,27 @@ const ProductCard = ({ product }) => {
 								value={updatedProduct.image}
 								onChange={(e) => setUpdatedProduct({ ...updatedProduct, image: e.target.value })}
 							/>
+							<Input
+								placeholder='Description'
+								name='description'
+								value={updatedProduct.description}
+								onChange={(e) => setUpdatedProduct({ ...updatedProduct, description: e.target.value })}
+							/>
+							<RadioGroup value={updatedProduct.targetGender}
+								onChange={(value) => setUpdatedProduct({ ...updatedProduct, targetGender: value })}>
+								<Stack direction='row'>
+									<Radio value='male'>Male</Radio>
+									<Radio value='female'>Female</Radio>
+								</Stack>
+							</RadioGroup>
+							<Select placeholder='Select Age Group' value={updatedProduct.ageGroup}
+								onChange={(e) => setUpdatedProduct({ ...updatedProduct, ageGroup:e.target.value }) }> 
+								<option value='kid'>Kid (less than 10 years old)</option>
+								<option value='juvenile'>Juvenile (10 to 20)</option>
+								<option value='young'>Young (20-40)</option>
+								<option value='middleage'>Middle age (40-60)</option>
+								<option value='old'>Old (older than 60)</option>
+							</Select>
 						</VStack>
 					</ModalBody>
 

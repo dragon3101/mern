@@ -16,16 +16,15 @@ const productSchema = new mongoose.Schema({
     image: {
         type: String,
         required: true,
+    },
+    ageGroup: {
+        type: String,
+        required: true,
+    },
+    targetGender: {
+        type: String,
+        required: true,
     }
-    // category: {
-    //     type: String,
-    //     required: true,
-    // },
-    // stock: {
-    //     type: Number,
-    //     required: true,
-    //     default: 0
-    // }
 }, {
     timestamps: true
 });

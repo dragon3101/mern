@@ -12,10 +12,11 @@ export const getProducts = async (req, res) => {
 
 };
 
-export const createProduct = async (req, res) => async (req,res) => {
+export const createProduct = async (req,res) => {
+    console.log("Creating product", req.body);
     const product = req.body;
 
-    if(!product.name || !product.price || !product.description || !product.image) {
+    if(!product.name || !product.price || !product.description || !product.image || !product.targetGender || !product.ageGroup) {
         return res.status(400).json({ message: "All fields are required" });
     }
 
