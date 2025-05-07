@@ -14,3 +14,4 @@ About installation:
    - Backend is using 5000 and use VS to debug Node
    - Frontend is 5173 as default, using browser is debug.
   
+MERN guide reference link (freeCodeCamp on YT): https://www.youtube.com/watch?v=O3BUHwfHf84&t=241s&ab_channel=freeCodeCamp.org 
