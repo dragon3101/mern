@@ -3,7 +3,7 @@ About my MERN projects:
    - Backend: simple MVC model
    - Frontend: Vite (as build tool) + Chakra UI (as pre-build element library) + zustand (state managment, Redux is 'overkill' for this small app)  
 3. This is a Web App Gift Shop to Add/Update/Delete gift (as an employee)
-4. Adding Chatbot for 'Customers' use to recommend gift: using Voiceflow (Chatbot builder) + Make.com (connecting app and server: in this case, connect Voiceflow to MongoDB to search DB)
+4. Adding AI Agent (Chatbot) for 'Customers' use to recommend gift: using Voiceflow (AI Chatbot builder) + Make.com (connecting app and server: in this case, connect Voiceflow to MongoDB to search DB)
 5. Current version:
    - Can only ask 1 question (you have to click 'Let's start over' or click 'Refresh' the bot to ask another one)
    - Questions should be about gift suggestion. For example: "I need a gift" or "Need a present for my dad's 60th birthday"
