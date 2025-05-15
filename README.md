@@ -27,7 +27,7 @@ About Deployment Service:
 
   
 Reference links:
-- MERN (freeCodeCamp on YT): https://www.youtube.com/watch?v=O3BUHwfHf84&t=241s&ab_channel=freeCodeCamp.org
+- MERN (freeCodeCamp)
 - Chakra: https://chakra-ui.com/
 - Zustand: https://github.com/pmndrs/zustand
 - Voiceflow: https://www.voiceflow.com/ 
