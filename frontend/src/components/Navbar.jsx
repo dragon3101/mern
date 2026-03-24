@@ -2,7 +2,7 @@ import { Button, Container, Flex, HStack, Text, useColorMode, Modal, useDisclosu
 	ModalOverlay, ModalContent, ModalHeader, ModalCloseButton, ModalFooter, ModalBody, Heading } from "@chakra-ui/react";
 import { Link } from "react-router-dom";
 
-import { PlusSquareIcon } from "@chakra-ui/icons";
+import { InfoOutlineIcon, PlusSquareIcon } from "@chakra-ui/icons";
 import { IoMoon } from "react-icons/io5";
 import { LuSun } from "react-icons/lu";
 import { MdHelp } from "react-icons/md"
@@ -44,13 +44,19 @@ const Navbar = () => {
 						{colorMode === "light" ? <IoMoon /> : <LuSun size='20' />}
 					</Button>
 					
+					<Link to={"/aboutme"}>
+						<Button leftIcon={<InfoOutlineIcon />} colorScheme='teal' variant='outline'>
+							About Me
+						</Button>
+					</Link>
+
 					<Button leftIcon={<MdHelp/>} colorScheme='blue' variant='solid' onClick={onOpen}>
-						Read Me
+						Help
 					</Button>
 					<Modal isOpen={isOpen} onClose={onClose} size='xl'>
 						<ModalOverlay />
 						<ModalContent>
-						<ModalHeader>Read Me</ModalHeader>
+						<ModalHeader>Help</ModalHeader>
 						<ModalCloseButton />
 						<ModalBody>
 							Hi, This is my MERN (MongoDB, Express, React, Node) project.
